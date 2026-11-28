@@ -1,0 +1,51 @@
+{
+  "name": "@chendb888/dsh-project-steward",
+  "version": "0.1.3",
+  "type": "module",
+  "description": "项目管家：软件项目发布/上架/运营统一管家——百货分区货架、常驻迷你条、全自动发布、定时采集、市场情报",
+  "meta": {
+    "title": "项目管家",
+    "description": "像百货商店一样经营你的软件项目：分区货架展示上架商品的下载/浏览/留言/收入，全自动发布上架，定时采集运营数据，常驻迷你条随时可见，竞品对比与市场空白发现。"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "docs/images/*.png",
+    "locale/*.json",
+    "src/**/*.js"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "edge-tts": "^1.0.1",
+    "zod": "^3.25.76"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chendb888/dsh-project-steward.git"
+  }
+}

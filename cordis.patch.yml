@@ -1,0 +1,7 @@
+- insert:
+    - id: project-steward
+      name: '@local/dsh-project-steward'
+      config:
+        dataDir: 'E:\项目管家\data'
+        collectIntervalMinutes: 60
+        confirmGates: false
